@@ -1,0 +1,53 @@
+;;; per-window-point.el --- persisent per-window values of point
+
+;; Copyright (c) 2011 Alp Aker
+
+;; Author: Alp Aker <alp.tekin.aker@gmail.com>
+;; Version: 1.63
+;; Keywords: convenience
+
+;; This program is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU General Public License as
+;; published by the Free Software Foundation; either version 2 of the
+;; License, or (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;; General Public License for more details.
+
+;; A copy of the GNU General Public License can be obtained from the
+;; Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+;; MA 02111-1307 USA
+
+;;; Commentary:
+
+;; Emacs conveniently allows one to work on different parts of the same
+;; buffer at the same time, but the rules governing buffer display are, for
+;; some people's editing habits, less than ideal.  Suppose for example that
+;; one is editing two parts of buffer <buf> in windows <win1> and <win2>,
+;; switches briefly to another buffer in <win2>, then returns to editing
+;; <buf> in <win2>.  This latter window will now display the same part of
+;; <buf> as <win1>, rather than the portion that one was just recently
+;; editing in it.  Per-window-point creates persistent values of point and
+;; window-start, so that in cases like that just described <win2> will return
+;; to its previous position in <buf>.
+
+;; In some cases, such as looking up a function definition via
+;; `describe-function', it makes sense for per-window-point to allow other
+;; Lisp programs to fix the value of point.  The package is reasonably
+;; intelligent in identifying when when it should do so.  Further control
+;; over repositioning is provided by the variables `pwp-no-reposition-names',
+;; `pwp-no-reposition-regexps', and `pwp-reposition-tests'.  Note also that
+;; the package always ignores minibuffer windows.
+
+;; To install the package, put this file in your load path and put:
+;;
+;;  (require 'per-window-point)
+;;
+;; in your .emacs.  To toggle per-window-point on and off, use the command
+;; `pwp-mode', or place 
+;;
+;;  (pwp-mode 1)
+;;
+;; in your .emacs to enable it automatically.
