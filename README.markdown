@@ -17,8 +17,8 @@ function definition via `describe-function`, point is moved to the function
 definition before the library that defines the function is displayed; we then
 don't want to move point away from the definition when the library is
 displayed.)  The package is reasonably intelligent in identifying situations
-in which it should defer to other Lisp programs.  It also provides a hook so
-that the user can define other types of exception.
+in which it should defer to other Lisp programs.  It also provides several
+hooks so that the user can define other types of exception.
 
 Installation and Usage
 ======================
