@@ -3,7 +3,7 @@
 ;; Copyright (c) 2011 Alp Aker
 
 ;; Author: Alp Aker <alp.tekin.aker@gmail.com>
-;; Version: 1.63
+;; Version: 1.64
 ;; Keywords: convenience
 
 ;; This program is free software; you can redistribute it and/or
@@ -52,9 +52,16 @@
 ;;
 ;; in your .emacs to enable it automatically.
 
+;; A Note on v24 (July, 2011):  The buffer display routines in v24 are
+;; currently being rewritten in preparation for the release of v24.1. As
+;; they've been changing on a near daily basis, I'm not going to try to keep
+;; up with them until the relevant code stabilizes (which is supposed to
+;; happend by August, 2011).  Until then, users who build v24 from source
+;; using a recent rev might see irregular behavior.
+
 ;;; Code: 
 
-(unless (< 21 emacs-major-version)
+(unless (version<= "22" emacs-version)
   (error "Per-window-point requires at least version 22"))
 
 ;;; ---------------------------------------------------------------------
@@ -131,7 +138,7 @@ for a description of the mode.")
             replace-buffer-in-windows
             kill-buffer
             bury-buffer)
-          (if (= 22 emacs-major-version)
+          (if (version< emacs-version "23") 
               '(display-buffer))))
 
 ;;; ---------------------------------------------------------------------
