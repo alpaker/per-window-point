@@ -31,3 +31,12 @@ Three variables provide control over whether pwp-mode should reposition a buffer
 2. `pwp-no-reposition-regexps`:  If a buffer name matches one of the regular expressions in this list,  Per-Window-Point will not position it.  The default value is `("^\\*.+\\*$")`.
 3. `pwp-reposition-tests`:  A list of functions.  When a buffer is displayed in a window, Per-Window-Point calls each function in this list with two arguments, the buffer and the window in question.  If any function returns nil, Per-Window-Point does not reposition.  The default value is nil.
 
+A Note on v24
+=============
+
+The buffer display routines in v24 are currently being rewritten in
+preparation for the release of v24.1. As they've been changing on a near
+daily basis, I'm not going to try to keep up with them until the relevant
+code stabilizes (which is supposed to happend by August, 2011).  Until then,
+users who build v24 from source using a recent rev (where "recent" means
+after April, 2011) might see irregular behavior.
