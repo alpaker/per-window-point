@@ -35,8 +35,8 @@ A Note on v24
 =============
 
 The buffer display routines in v24 are currently being rewritten in
-preparation for the release of v24.1. As they've been changing on a near
-daily basis, I'm not going to try to keep up with them until the relevant
-code stabilizes (which is supposed to happen by August, 2011).  Until then,
-users who build v24 from source using a recent rev (where "recent" means
-after April, 2011) might see irregular behavior.
+preparation for the release of v24.1. As they've been changing on a
+near-daily basis, I'm not going to try to keep up with them until the
+relevant code stabilizes (which is supposed to happen by August,
+2011).  Until then, users who build v24 from source using a recent rev might
+see irregular behavior.
