@@ -54,9 +54,9 @@
 
 ;; A Note on v24 (July, 2011):  The buffer display routines in v24 are
 ;; currently being rewritten in preparation for the release of v24.1. As
-;; they've been changing on a near daily basis, I'm not going to try to keep
+;; they've been changing on a near-daily basis, I'm not going to try to keep
 ;; up with them until the relevant code stabilizes (which is supposed to
-;; happend by August, 2011).  Until then, users who build v24 from source
+;; happen by August, 2011).  Until then, users who build v24 from source
 ;; using a recent rev might see irregular behavior.
 
 ;;; Code: 
@@ -87,7 +87,7 @@
 When the buffer displayed in a window changes, per-window-point calls each
 function in this list with two arguments, the window in question
 and the buffer about to be displayed.  If any function returns
-nil, Per-Window-Point does not position the buffer."
+nil, per-window-point does not position the buffer."
   :group 'per-window-point
   :type 'hook)
 
