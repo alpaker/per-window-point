@@ -1,3 +1,6 @@
+<b>NOTE</b>:  This package is obsolete as of v24.  Use the built-in option
+`switch-to-buffer-preserve-window-point' instead.
+
 Emacs conveniently allows one to work on different parts of the same buffer
 at the same time, but the rules governing buffer display are, for some
 people's editing habits, less than ideal.  Suppose for example that one is
