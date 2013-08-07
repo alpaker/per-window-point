@@ -3,7 +3,7 @@
 ;; Copyright (c) 2011 Alp Aker
 
 ;; Author: Alp Aker <alp.tekin.aker@gmail.com>
-;; Version: 1.65
+;; Version: 1.66
 ;; Keywords: convenience
 
 ;; This program is free software; you can redistribute it and/or
@@ -21,6 +21,9 @@
 ;; MA 02111-1307 USA
 
 ;;; Commentary:
+
+;; NOTE:  This package is obsolete as of v24.  Use the built-in option
+;; `switch-to-buffer-preserve-window-point' instead.
 
 ;; Emacs conveniently allows one to work on different parts of the same
 ;; buffer at the same time, but the rules governing buffer display are, for
@@ -52,16 +55,14 @@
 ;;
 ;; in your .emacs to enable it automatically.
 
-;; A Note on v24 (July, 2011):  The buffer display routines in v24 are
-;; currently being rewritten in preparation for the release of v24.1.  I'm
-;; not going to try to keep up with these changes until the relevant code
-;; stabilizes.  Until then, users who build v24 from source using a recent rev
-;; might see irregular behavior.
-
 ;;; Code: 
 
 (unless (version<= "22" emacs-version)
   (error "Per-window-point requires at least version 22"))
+
+(when (version<=  emacs-version "24")
+  (error "Per-window-point is obsolete as of version 24.  Use the built-in 
+option `switch-to-buffer-preserve-window-point' instead."))
 
 ;;; ---------------------------------------------------------------------
 ;;; User Options
