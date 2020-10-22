@@ -1,5 +1,5 @@
-<b>NOTE</b>:  This package is obsolete as of v24.  Use the built-in option
-`switch-to-buffer-preserve-window-point` instead.
+<b>NOTE</b>:  As of v24 this package's functionality is provided by the built-in option
+`switch-to-buffer-preserve-window-point`, which you should use instead.
 
 Emacs conveniently allows one to work on different parts of the same buffer
 at the same time, but the rules governing buffer display are, for some
